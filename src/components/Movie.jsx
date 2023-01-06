@@ -33,7 +33,7 @@ const Movie = ({ movie, height }) => {
   return (
     <div>
       <div
-        className={`relative sm:hover:scale-105 duration-300 w-[300px] ${
+        className={`relative overflow-hidden w-[300px] ${
           height ? "h-full" : "h-[180px]"
         } mr-4 cursor-pointer`}
       >
