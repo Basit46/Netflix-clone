@@ -13,8 +13,9 @@ const authContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const signUp = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password);
+  const signUp = async (email, password) => {
+    await createUserWithEmailAndPassword(auth, email, password);
+
     setDoc(doc(db, "users", email), {
       savedMovies: [],
     });

@@ -53,8 +53,11 @@ const Account = () => {
           className="w-full overflow-scroll scroll-smooth scrollbar-hide "
         >
           <div className="flex w-fit">
-            {movies.map((movie) => (
-              <div className="relative w-[300px] h-[180px] mr-2 cursor-pointer">
+            {movies.map((movie, index) => (
+              <div
+                key={index}
+                className="relative w-[300px] h-[180px] mr-2 cursor-pointer"
+              >
                 <img
                   className="h-full w-full object-cover"
                   src={`https://image.tmdb.org/t/p/w500${movie?.img}`}
